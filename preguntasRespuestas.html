@@ -1,0 +1,36 @@
+<h3>¿Qué es un archivo JSON?</h3>
+<p>
+    JSON, que significa JavaScript Object Notation, es una formatación usada para estructurar datos en forma de texto y
+    transmitirlos de un sistema a otro, como en aplicaciones cliente-servidor o en aplicaciones móviles.</p>
+
+<h3>¿Qué es la asincronía en Javascript?</h3>
+
+<p>La programación asíncrona es una técnica que permite a tu programa iniciar una tarea de larga duración y seguir
+    respondiendo a otros eventos mientras esa tarea se ejecuta, en lugar de tener que esperar hasta que esa tarea haya
+    terminado. Una vez que dicha tarea ha finalizado, tu programa presenta el resultado.</p>
+
+<h3>¿Qué son las Promesas?</h3>
+Una promesa es un objeto que representa la terminación o el fracaso de una operación asíncrona.
+
+<h3>¿Qué es y cómo se usa ‘Fetch’ en JS?</h3>
+
+<p>La API Fetch proporciona una interfaz JavaScript para acceder y manipular partes del canal HTTP, tales como
+    peticiones y respuestas. También provee un método global fetch() que proporciona una forma fácil y lógica de
+    obtener recursos de forma asíncrona por la red.</p>
+<p>Una petición básica de fetch es realmente simple de realizar. Eche un vistazo al siguente código:
+
+    fetch('http://example.com/movies.json')
+    .then(response => response.json())
+    .then(data => console.log(data));</p>
+
+<h3>¿Cómo se usa Async/Await?</h3>
+<p>La palabra clave await recibe una Promesa y la convierte en un valor de retorno (o genera una excepción en caso de
+    error). Cuando usamos await, JavaScript esperará hasta que finalice la Promesa. Si se completa con éxito (el término
+    utilizado es fulfilled), el valor obtenido es retornado. Si la Promesa es rechazada (el término utilizado es
+    rejected), se retorna el error arrojado por la excepción.</p>
+
+<h3>¿Cuándo deberíamos usar código asíncrono?</h3>
+
+De forma similar, en un programa informático, la programación asíncrona permite al programa trabajar en distintas tareas
+simultáneamente sin tener que esperar a completar una tarea para pasar a la siguiente. Esto permite que un programa sea
+capaz de hacer más cosas en menos tiempo

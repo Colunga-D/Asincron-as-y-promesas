@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Estudio</title>
+</head>
+<body>
+
+<script>
+  // El JSON proporcionado
+  var data = {
+    "results": [
+      {
+        "title": "Estudiar Js",
+        "priority": "alta",
+        "isDone": false
+      },
+      {
+        "title": "Estudiar CSS",
+        "priority": "alta",
+        "isDone": true
+      },
+      {
+        "title": "Estudiar OOP",
+        "priority": "media",
+        "isDone": false
+      },
+      {
+        "title": "Estudiar IA",
+        "priority": "baja",
+        "isDone": false
+      }
+    ]
+  };
+
+  // Función para crear y mostrar la tabla en el documento
+  function mostrarTabla(data) {
+    // Crear la tabla
+    var table = document.createElement('table');
+    table.border = '1';
+
+    // Crear encabezados
+    var thead = document.createElement('thead');
+    var headerRow = document.createElement('tr');
+    for (var key in data.results[0]) {
+      var th = document.createElement('th');
+      th.appendChild(document.createTextNode(key));
+      headerRow.appendChild(th);
+    }
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    // Agregar filas de datos
+    var tbody = document.createElement('tbody');
+    data.results.forEach(function (item) {
+      var row = document.createElement('tr');
+      for (var key in item) {
+        var cell = document.createElement('td');
+        cell.appendChild(document.createTextNode(item[key]));
+        row.appendChild(cell);
+      }
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+
+    // Agregar la tabla al cuerpo del documento
+    document.body.appendChild(table);
+  }
+
+  // Llamar a la función para mostrar la tabla con el JSON proporcionado
+  mostrarTabla(data);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<script>
+  const jsonData = {
+    "results": [
+      {
+        "title": "Estudiar Js",
+        "priority": "alta",
+        "isDone": false
+      },
+      {
+        "title": "Estudiar CSS",
+        "priority": "alta",
+        "isDone": true
+      },
+      {
+        "title": "Estudiar OOP",
+        "priority": "media",
+        "isDone": false
+      },
+      {
+        "title": "Estudiar IA",
+        "priority": "baja",
+        "isDone": false
+      }
+    ]
+  };
+
+  // Muestra el objeto JSON completo en la consola
+  console.log(jsonData);
+
+  // Muestra cada tarea en la consola
+  jsonData.results.forEach(task => {
+    console.log("Título:", task.title);
+    console.log("Prioridad:", task.priority);
+    console.log("¿Está hecha?", task.isDone);
+    console.log("-----");
+  });
+</script>
